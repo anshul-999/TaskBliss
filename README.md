@@ -1,2 +1,5 @@
-# Taskbliss---Todo-List-App
-Welcome to Taskbliss, your go-to Todo list app designed with simplicity and ease of use in mind. Whether you're new to coding or an experienced developer, Taskbliss makes managing your tasks a breeze!
+# Taskbliss-TodoList-App
+Seamless user experience with React, incorporating features such as real-time updates and user
+authentication.
+Implemented CRUD operations, allowing users to seamlessly Create, Read, Update, and Delete tasks, enhancing
+overall user experience and functionality
