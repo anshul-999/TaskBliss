@@ -1,8 +1,8 @@
-.contactForm input, textarea{
+.contactForm input{
     padding: 10px;
     margin: 10px 0px;
     outline: none;
-    width: 90%;
+    width: 50%;
     background-color: var(--card-lavender);
     border-radius: 5px;
 }
@@ -14,7 +14,7 @@
     padding: 10px;
     margin: 10px 0px;
     outline: none;
-    width: 90%;
+    width: 50%;
     background-color: var(--card-lavender);
     border-radius: 5px;
 }

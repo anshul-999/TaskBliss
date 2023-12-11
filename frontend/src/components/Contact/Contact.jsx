@@ -48,7 +48,7 @@ const Contact = () => {
       <div className="container height flex-center">
         <div className="resContact w-full h-full flex ">
           {/* Left */}
-          {!formSubmitted && <div className="contactForm w-1/2 flex-column">
+          {!formSubmitted && <div className="contactForm w-full flex-column">
             <h1>Contact Form</h1>
             <input type="text" name="name" placeholder="Enter your Full Name"
             onChange={change} />
@@ -76,9 +76,9 @@ const Contact = () => {
           </div>}
           {formSubmitted && <p className="formSuccess">Form submitted successfully!</p>}
           {/* Right */}
-          <div className="contactMe w-1/2 flex-column">
+          {/* <div className="contactMe w-1/2 flex-column">
             <h1>Contact Me</h1>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
