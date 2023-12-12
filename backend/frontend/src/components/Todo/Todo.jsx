@@ -56,13 +56,13 @@ const Todo = () => {
   // Submitting the Tasks
   const submit = async () => {
     try {
-      if (inputs.title === "" || inputs.body === "") {
+      if (inputs.body === "") {
         toast.error("Empty task cannot be added");
         return;
       }
       if (id) {
         const response = await axios.post(
-          `http://localhost:5000/api/v2/addTask`,
+          `${window.location.origin}/api/v2/addTask`,
           {
             title: inputs.title,
             body: inputs.body,
@@ -92,7 +92,7 @@ const Todo = () => {
     try {
       if (id) {
         await axios
-          .delete(`http://localhost:5000/api/v2/deleteTask/${cardId}`, {
+          .delete(`${window.location.origin}/api/v2/deleteTask/${cardId}`, {
             data: { id: id },
           })
           .then((response) => {
@@ -122,7 +122,7 @@ const Todo = () => {
     const myList = async () => {
       try {
         if(id){
-          const response = await axios.get(`http://localhost:5000/api/v2/getTasks/${id}`);
+          const response = await axios.get(`${window.location.origin}/api/v2/getTasks/${id}`);
           setArray(
             (response.data.list ?? []).map((item, index) => ({
               ...item,
