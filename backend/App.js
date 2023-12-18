@@ -17,13 +17,11 @@ app.use("/api/v1", auth);
 app.use("/api/v2", todoList);
 app.use("/api/v3", contact)
 
-// Serve static files from the 'frontend/build' directory
-app.use(express.static(path.join(__dirname, './frontend/build')));
-
-
 app.get('*', function(req, res){
+    // Serve static files from the 'frontend/build' directory
+    app.use(express.static(path.resolve(__dirname, 'frontend','build')));
     // Handle all other routes by sending the 'index.html' file
-    res.sendFile(path.join(__dirname, './frontend/build/index.html'));
+    res.sendFile(path.resolve(__dirname, 'frontend','build', 'index.html'));
 });
 
 app.listen(port, ()=>{
