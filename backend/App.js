@@ -26,11 +26,6 @@ app.get('*', function(req, res){
     res.sendFile(path.join(__dirname, './frontend/build/index.html'));
 });
 
-app.get('/', (req,res)=>{
-    res.send("Hello")
-})
-
-
 app.listen(port, ()=>{
     console.log(`Server is listening at port ${port}`)
 })
